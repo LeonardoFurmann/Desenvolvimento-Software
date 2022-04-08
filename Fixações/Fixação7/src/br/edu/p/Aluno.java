@@ -6,3 +6,5 @@ public class Aluno {
 	public String matricula;
 	public double nota;
 }
+
+
