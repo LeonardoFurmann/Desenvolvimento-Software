@@ -1,10 +1,8 @@
-package br.edu.p;
+package br.edu.up;
 
 public class Aluno {
-	
-	public String nome;
+
 	public String matricula;
+	public String nome;
 	public double nota;
-	
-	
 }
