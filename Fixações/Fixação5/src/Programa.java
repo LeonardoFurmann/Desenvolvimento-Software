@@ -53,6 +53,7 @@ public class Programa {
 
 		System.out.println("Valor Total: " + (grupoA+grupoB+grupoC+grupoD+grupoE+grupoE));
 
+			leitor.close();
 	}
 
 	private static void ImprimirGrupo(String letra, int valor) {
