@@ -12,7 +12,8 @@ public class Programa {
 		Colorida[][] cores = new Colorida[x][x];
 		float[][] cinza = new float[x][x];
 		boolean  ver = false;
-	
+		
+		Colorida novaCor = new Colorida();
 		int op;
 		
 	do {
@@ -26,7 +27,7 @@ public class Programa {
 		
 		case 2:
 		if(ver) {
-			Transformar(cores, cinza);
+			novaCor.Transformar(cores, cinza);
 		}else { System.out.println("\nÉ necessário preencher a opção 1 primeiro");}
 		break;
 		
@@ -69,23 +70,23 @@ public class Programa {
 		}	
 	}
 
-	private static void Transformar(Colorida[][] cor, float[][] cinza) {
-		
-		
-		int[][] temp = new int[x][x];
-		
-		for (int i = 0; i < x; i++) {
-			for (int j = 0; j < x; j++) {
-				
-				 temp[i][j] = (cor[i][j].r + cor[i][j].g + cor[i][j].b)/x;
-				 cinza[i][j] = temp[i][j];
-				
-			}
-		}
-		
-		System.out.println("\nTransformou!");
-		
-	}
+//	private static void Transformar(Colorida[][] cor, float[][] cinza) {
+//		
+//		
+//		int[][] temp = new int[x][x];
+//		
+//		for (int i = 0; i < x; i++) {
+//			for (int j = 0; j < x; j++) {
+//				
+//				 temp[i][j] = (cor[i][j].r + cor[i][j].g + cor[i][j].b)/x;
+//				 cinza[i][j] = temp[i][j];
+//				
+//			}
+//		}
+//		
+//		System.out.println("\nTransformou!");
+//		
+//	}
 
 	private static void Preencher(Colorida[][] cor) {
 		
