@@ -21,7 +21,7 @@ public class Programa {
 		switch(op){
 		
 		case 1:
-			Preencher(cores);
+			novaCor.Preencher(cores);
 			ver = true;
 		break;
 		
@@ -33,7 +33,7 @@ public class Programa {
 		
 		case 3:
 		if(ver) {
-			Imprimir(cores,cinza);
+			novaCor.Imprimir(cores,cinza);
 		}else { System.out.println("\nÉ necessário preencher a opção 1 primeiro");}
 		break;
 		}
@@ -44,31 +44,31 @@ public class Programa {
 		
 	}
 
-	private static void Imprimir(Colorida[][] cor, float[][] cinza) {
-			
-		System.out.println("\n\n*** Imagem Colorida (R,G,B) ***");
-		for (int i = 0; i < x; i++) {
-			System.out.println();
-			for (int j = 0; j < x; j++) {
-				
-			System.out.printf("%d,%d,%d", cor[i][j].r, cor[i][j].g, cor[i][j].b );
-			System.out.printf(" | ");
-			
-			
-			}
-		}
-		
-		System.out.println("\n\n***** Imagem em Tons de Cinza ******");
-		for (int i = 0; i < x; i++) {
-			System.out.println();
-			for (int j = 0; j < x; j++) {	
-			System.out.print(cinza[i][j]);
-			System.out.printf(" | ");
-			
-			
-			}
-		}	
-	}
+//	private static void Imprimir(Colorida[][] cor, float[][] cinza) {
+//			
+//		System.out.println("\n\n*** Imagem Colorida (R,G,B) ***");
+//		for (int i = 0; i < x; i++) {
+//			System.out.println();
+//			for (int j = 0; j < x; j++) {
+//				
+//			System.out.printf("%d,%d,%d", cor[i][j].r, cor[i][j].g, cor[i][j].b );
+//			System.out.printf(" | ");
+//			
+//			
+//			}
+//		}
+//		
+//		System.out.println("\n\n***** Imagem em Tons de Cinza ******");
+//		for (int i = 0; i < x; i++) {
+//			System.out.println();
+//			for (int j = 0; j < x; j++) {	
+//			System.out.print(cinza[i][j]);
+//			System.out.printf(" | ");
+//			
+//			
+//			}
+//		}	
+//	}
 
 //	private static void Transformar(Colorida[][] cor, float[][] cinza) {
 //		
@@ -88,48 +88,48 @@ public class Programa {
 //		
 //	}
 
-	private static void Preencher(Colorida[][] cor) {
-		
-		System.out.println("\n\n*** Preencher ***\n");
-		
-		for (int i = 0; i < x; i++) {
-			for (int j = 0; j < x; j++) {
-			
-				Colorida novaCor = new Colorida();
-			
-			do {
-				System.out.printf("Digite o valor[%d][%d] da cor R: " ,  i+1, j+1);
-				novaCor.r = leitor.nextInt();
-				
-			System.out.println(novaCor.r > 255 ? "O valor não pode ser maior que 255, digite novamente\n" : "");
-			
-			}while(novaCor.r < 0 || novaCor.r > 255 );
-			
-			do {
-				System.out.printf("Digite o valor[%d][%d] da cor G:" ,  i+1, j+1);
-				novaCor.g = leitor.nextInt();
-				
-			System.out.println(novaCor.g < 0 || novaCor.g > 255 ? "O valor não pode ser maior que 255, digite novamente\n" : "");
-				
-			}while(novaCor.g > 255);
-
-			do {
-				System.out.printf("Digite o valor[%d][%d] da cor B:" ,   i+1, j+1);
-				novaCor.b = leitor.nextInt();
-				
-			System.out.println(novaCor.b < 0 || novaCor.b > 255 ? "O valor não pode ser maior que 255, digite novamente\n" : "");
-				
-			}while(novaCor.b > 255);	
-			
-			System.out.println();
-			
-				cor[i][j] = novaCor;
-			
-			}			
-		}
-		
-		
-	}
+//	private static void Preencher(Colorida[][] cor) {
+//		
+//		System.out.println("\n\n*** Preencher ***\n");
+//		
+//		for (int i = 0; i < x; i++) {
+//			for (int j = 0; j < x; j++) {
+//			
+//				Colorida novaCor = new Colorida();
+//			
+//			do {
+//				System.out.printf("Digite o valor[%d][%d] da cor R: " ,  i+1, j+1);
+//				novaCor.r = leitor.nextInt();
+//				
+//			System.out.println(novaCor.r > 255 ? "O valor não pode ser maior que 255, digite novamente\n" : "");
+//			
+//			}while(novaCor.r < 0 || novaCor.r > 255 );
+//			
+//			do {
+//				System.out.printf("Digite o valor[%d][%d] da cor G:" ,  i+1, j+1);
+//				novaCor.g = leitor.nextInt();
+//				
+//			System.out.println(novaCor.g < 0 || novaCor.g > 255 ? "O valor não pode ser maior que 255, digite novamente\n" : "");
+//				
+//			}while(novaCor.g > 255);
+//
+//			do {
+//				System.out.printf("Digite o valor[%d][%d] da cor B:" ,   i+1, j+1);
+//				novaCor.b = leitor.nextInt();
+//				
+//			System.out.println(novaCor.b < 0 || novaCor.b > 255 ? "O valor não pode ser maior que 255, digite novamente\n" : "");
+//				
+//			}while(novaCor.b > 255);	
+//			
+//			System.out.println();
+//			
+//				cor[i][j] = novaCor;
+//			
+//			}			
+//		}
+//		
+//		
+//	}
 
 	private static int Menu() {
 		int op;
