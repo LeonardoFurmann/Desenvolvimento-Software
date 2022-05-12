@@ -5,13 +5,17 @@ import java.util.Scanner;
 public class Colorida {
 
 	static int x = 2;
-	static Scanner leitor = new Scanner(System.in);
+	public static Scanner leitor = new Scanner(System.in);
+	Scanner leitorDoObjeto = new Scanner(System.in);
 	int r;
 	int g;
 	int b;
 
 public void Transformar(Colorida[][] cor, float[][] cinza) {
+	
+	//Colorida.leitor;
 		
+	this.leitorDoObjeto;
 		
 		int[][] temp = new int[x][x];
 		
