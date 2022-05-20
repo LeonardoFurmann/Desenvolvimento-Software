@@ -11,7 +11,7 @@ public class Programa {
 
 	public static void main(String[] args) {
 		
-		String url = "jdbc:sqlite:C:\\Users\\Aluno\\Documents\\ExSQLite\\src\\db\\primeiro_db_sqlite.db";
+		String url = "jdbc:sqlite:D:\\Faculdade\\Desenvolvimento de software\\_software_git\\ExSQLite\\src\\db\\primeiro_db_sqlite.db";
 		
 		try {
 			Connection con = DriverManager.getConnection(url);
@@ -19,13 +19,13 @@ public class Programa {
 			
 			Scanner leitor = new Scanner(System.in);
 			
-			System.out.println("Informe o nome da pessoa");
+			System.out.println("Informe o nome da pessoa: ");
 			String nomeEntrada = leitor.nextLine();
 			
-			System.out.println("Informe o cpf da pessoa");
+			System.out.println("Informe o cpf da pessoa: ");
 			String cpfEntrada = leitor.nextLine();
 			
-			System.out.println("Informe a data de nascimento da pessoa");
+			System.out.println("Informe a data de nascimento da pessoa: ");
 			String dataEntrada = leitor.nextLine();
 		
 
